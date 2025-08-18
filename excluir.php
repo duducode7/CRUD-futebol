@@ -1,9 +1,10 @@
 <?php
 include("conexao.php");
 
-$email = $_GET["email"];
+$numero_camisa = $_GET["numero_camisa"];
 $nome = $_GET["nome"];
-$sql = "DELETE FROM usuarios WHERE camisa = '$camisa' AND posicao = '$posicao' AND nome = '$nome'";
+$posicao = $_GET["posicao"];
+$sql = "DELETE FROM jogadores WHERE numero_camisa = '$numero_camisa' AND posicao = '$posicao' AND nome = '$nome'";
 $result = mysqli_query($conn, $sql);
 
 if ($result) {
