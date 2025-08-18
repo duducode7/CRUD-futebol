@@ -3,7 +3,7 @@ include("conexao.php");
 
 $email = $_GET["email"];
 $nome = $_GET["nome"];
-$sql = "DELETE FROM usuarios WHERE email = '$email' AND nome = '$nome'";
+$sql = "DELETE FROM usuarios WHERE camisa = '$camisa' AND posicao = '$posicao' AND nome = '$nome'";
 $result = mysqli_query($conn, $sql);
 
 if ($result) {

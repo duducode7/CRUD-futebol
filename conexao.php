@@ -3,7 +3,7 @@
 $host = "localhost";
 $user = "root";
 $password = "root";
-$db = "crud_exemplo";
+$db = "futebol_db";
 
 $conn = mysqli_connect($host, $user, $password, $db); 
 if ($conn->connect_error) {

@@ -2,8 +2,9 @@
 include("conexao.php");
 
 $nome = $_GET["nome"];
-$email = $_GET["email"];
-$sql = "SELECT * FROM usuarios WHERE nome = '$nome' AND email = '$email'";
+$numero_camisa = $_GET["numero_camisa"];
+$posicao = $_GET["posicao"];
+$sql = "SELECT * FROM usuarios WHERE nome = '$nome' AND camisa = '$numero_camisa' AND posicao = '$posicao' ";
 $res = mysqli_query($conn, $sql);
 $dado = mysqli_fetch_assoc($res);
 
