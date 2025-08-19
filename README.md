@@ -7,5 +7,7 @@ Além disso, conta com a funcionalidade de gerenciamento de partidas, possibilit
 Tecnologias Utilizadas
 
 ● PHP
+
 ● MySQL 
+
 ● HTML/CSS 
