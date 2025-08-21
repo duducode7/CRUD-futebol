@@ -26,7 +26,7 @@ if ($mostrar_partidas) {
             echo "Placar: " . htmlspecialchars($partida['gols_casa']) . " - " . 
                              htmlspecialchars($partida['gols_fora']) . "<br>";
             echo "<a href='editar_partida.php?id=" . $partida['id'] . "' class='btn'>Editar</a> ";
-            echo "<a href='excluir_partida.php?id=" . $partida['id'] . "' class='btn btn-excluir'>Excluir</a>";
+            echo "<a href='excluir_partida.php?id=" . $partida['id'] . "' class='btn-btn-excluir'>Excluir</a>";
             echo "</div>";
         }
     } else {
@@ -39,7 +39,6 @@ if ($mostrar_partidas) {
 } else {
 
     echo "<h1>Lista de Jogadores</h1>";
-    echo "<a href='index.php?mostrar=partidas' class='btn'>Mostrar Partidas</a><br><br>";
     
     
     $sql = "SELECT t.id AS time_id, t.nome AS time_nome, 
@@ -86,6 +85,9 @@ if ($mostrar_partidas) {
         echo "Nenhum registro encontrado<br><br>";
     }
     
-    echo "<a href='cadastrar.php' class='btn'>Cadastrar Novo Jogador</a>";
+    echo "<a href='cadastrar.php' class='btn-cds'>Cadastrar Novo Jogador</a>";
+    echo "<br>";
+    echo "<br>";
+    echo "<a href='index.php?mostrar=partidas' class='btn-ptds'>Mostrar Partidas</a><br><br>";
 }
 ?>

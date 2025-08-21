@@ -34,7 +34,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $conn->close();
 ?>
 
-
 <form method="POST">
     Nome e Sobrenome: <input type="text" name="nome" required><br>
     N° Camisa: <input type="number" name="numero_camisa" required><br>
