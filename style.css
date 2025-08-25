@@ -1,0 +1,48 @@
+.time-corinthians {
+    margin-top: 0;
+    border: 3px double red;
+    background-color: #ffe6e6;
+    padding: 10px;
+}
+
+.time-vasco {
+    margin-top: 0;
+    border: 3px double black;
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+.time-grêmio {
+    margin-top: 0;
+    border: 3px double blue;
+    background-color: #e6f0ff;
+    padding: 10px;
+}
+
+.btn {
+    color:rgb(0, 199, 0);
+    border-radius: 8px; 
+}
+
+.btn-excluir {
+    color: red;
+}
+
+hr {
+    color: black;
+    margin-top: 0;
+}
+
+.btn-geral {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 2px solid black;  
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    color: white; 
+    background: rgb(88, 88, 88);
+    transition: 0.3s;
+}
+
+

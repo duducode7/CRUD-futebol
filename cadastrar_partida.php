@@ -26,6 +26,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"
+    <title></title>
+</head>
+<body>
+
 <h1>Cadastrar Nova Partida</h1>
 
 <form method="POST">
@@ -46,7 +56,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <label>Data do Jogo:</label>
     <input type="date" name="data_jogo" required><br><br>
     
-    <input type="submit" value="Cadastrar" class="btn">
+    <input type="submit" value="Cadastrar" class="btn-geral">
 </form>
+<br>
+<a href="index.php?mostrar=partidas" class="btn-geral">Voltar</a>
 
-<a href="index.php?mostrar=partidas" class="btn">Voltar</a>
+
+    
+</body>
+</html>

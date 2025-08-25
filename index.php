@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"
+    <title></title>
+</head>
+<body>
+</body>
+</html>
+
 <?php
 include("conexao.php");
 
@@ -26,15 +38,15 @@ if ($mostrar_partidas) {
             echo "Placar: " . htmlspecialchars($partida['gols_casa']) . " - " . 
                              htmlspecialchars($partida['gols_fora']) . "<br>";
             echo "<a href='editar_partida.php?id=" . $partida['id'] . "' class='btn'>Editar</a> ";
-            echo "<a href='excluir_partida.php?id=" . $partida['id'] . "' class='btn-btn-excluir'>Excluir</a>";
+            echo "<a href='excluir_partida.php?id=" . $partida['id'] . "' class='btn-excluir'>Excluir</a>";
             echo "</div>";
         }
     } else {
         echo "<p>Nenhuma partida agendada.</p>";
     }
     
-    echo "<br><a href='cadastrar_partida.php' class='btn'>Adicionar Nova Partida</a><br>";
-    echo "<a href='index.php' class='btn'>Mostrar Jogadores</a>";
+    echo "<br><a href='cadastrar_partida.php' class='btn-geral'>Adicionar Nova Partida</a><br><br>";
+    echo "<a href='index.php' class='btn-geral'>Mostrar Jogadores</a>";
     
 } else {
 
@@ -60,8 +72,12 @@ if ($mostrar_partidas) {
                     echo "<br>"; 
                 }
                 $time_atual = $linha['time_id'];
-                echo "<h3>Time: " . htmlspecialchars($linha['time_nome']) . "</h3>";
+
+                $class_time = strtolower(str_replace(" ", "-", $linha['time_nome']));
+
+                echo "<h3 class='time-" . htmlspecialchars($class_time) . "'>Time: " . htmlspecialchars($linha['time_nome']) . "</h3>";
             }
+
             
            
             if ($linha['jogador_id']) {
@@ -78,16 +94,22 @@ if ($mostrar_partidas) {
                 echo "<a href='excluir.php?numero_camisa=" . urlencode($linha['numero_camisa']) . 
                      "&nome=" . urlencode($linha['jogador_nome']) . 
                      "&posicao=" . urlencode($linha['posicao']) . 
-                     "&time_id=" . urlencode($linha['time_id']) . "' class='btn btn-excluir'>Excluir</a><br><br>";
+                     "&time_id=" . urlencode($linha['time_id']) . "' class='btn-excluir'>Excluir</a><br><br>";
+
+                echo "<hr>";
             }
         }
     } else {
         echo "Nenhum registro encontrado<br><br>";
     }
     
-    echo "<a href='cadastrar.php' class='btn-cds'>Cadastrar Novo Jogador</a>";
+    echo "<a href='cadastrar.php' class='btn-geral'>Cadastrar Novo Jogador</a>";
     echo "<br>";
     echo "<br>";
-    echo "<a href='index.php?mostrar=partidas' class='btn-ptds'>Mostrar Partidas</a><br><br>";
+    echo "<a href='index.php?mostrar=partidas' class='btn-geral'>Mostrar Partidas</a><br><br>";
 }
 ?>
+
+
+    
+

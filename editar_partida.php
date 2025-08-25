@@ -34,6 +34,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit;
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"
+    <title></title>
+</head>
+<body>
+    
 
 <h1>Editar Partida</h1>
 
@@ -65,7 +75,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <label>Gols Time Visitante:</label>
     <input type="number" name="gols_fora" value="<?= $partida['gols_fora'] ?>"><br><br>
     
-    <input type="submit" value="Salvar" class="btn">
+    <input type="submit" value="Salvar" class="btn-geral">
 </form>
 
-<a href="index.php?mostrar=partidas" class="btn">Voltar</a>
+<br>
+
+<a href="index.php?mostrar=partidas" class="btn-geral">Voltar</a>
+
+</body>
+</html>
